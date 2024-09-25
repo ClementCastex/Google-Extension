@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Kawaii-Mod",
-  "version": "alpha",
+  "version": "1.0",
   "description": "Une extension Chrome simple pour changer de theme, crée dans le cadre d'un exercice d'apprentisage de javascript.",
   "action": {
     "default_popup": "popup.html",
@@ -11,5 +11,9 @@
       "128": "Kirby_29.png"
     }
   },
-  "permissions": ["storage"]
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"]
 }
